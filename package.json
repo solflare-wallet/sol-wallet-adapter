@@ -1,9 +1,8 @@
 {
-  "name": "@project-serum/sol-wallet-adapter",
+  "name": "@solflare-wallet/sol-wallet-adapter",
   "version": "0.2.5",
   "description": "Library to allow Solana dApps to use third-party wallets to sign transactions",
   "license": "Apache-2.0",
-  "repository": "project-serum/sol-wallet-adapter",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "engines": {

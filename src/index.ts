@@ -17,14 +17,14 @@ export default class Wallet extends EventEmitter {
     [(value: string) => void, (reason: Error) => void]
   > = new Map();
 
-  constructor(provider: unknown, private _network: string) {
+  constructor(provider: unknown, private _network: string, origin?: string) {
     super();
     if (isInjectedProvider(provider)) {
       this._injectedProvider = provider;
     } else if (isString(provider)) {
       this._providerUrl = new URL(provider);
       this._providerUrl.hash = new URLSearchParams({
-        origin: window.location.origin,
+        origin: origin || window.location.origin,
         network: this._network,
       }).toString();
     } else {
